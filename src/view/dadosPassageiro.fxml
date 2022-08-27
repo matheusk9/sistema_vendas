@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: teal;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.formPassageiro">
+   <children>
+      <GridPane blendMode="COLOR_BURN" layoutX="38.0" layoutY="143.0" prefHeight="190.0" prefWidth="332.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="168.0" minWidth="10.0" prefWidth="131.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.0" minWidth="10.0" prefWidth="215.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Nome completo:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="CPF:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="Data de nascimento:" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfNomePassageiro" blendMode="COLOR_BURN" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="tfCPFpassageiro" blendMode="COLOR_BURN" GridPane.columnIndex="1">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <DatePicker fx:id="dataNascimento" blendMode="COLOR_BURN" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </DatePicker>
+         </children>
+      </GridPane>
+      <Group id="buscaCPF" blendMode="COLOR_BURN" layoutX="53.0" layoutY="29.0">
+         <children>
+            <TextField fx:id="tfBuscarCPF" blendMode="COLOR_BURN" layoutX="-4.0" layoutY="27.0" prefHeight="25.0" prefWidth="213.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Label layoutX="70.0" text="* Buscar CPF:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="btBuscarCPF" blendMode="COLOR_BURN" defaultButton="true" layoutX="216.0" layoutY="27.0" mnemonicParsing="false" text="OK">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Group>
+      <VBox alignment="CENTER_LEFT" layoutX="402.0" layoutY="223.0" prefHeight="94.0" prefWidth="184.0" spacing="10.0">
+         <children>
+            <Button fx:id="btIrParaPagamento" blendMode="COLOR_BURN" defaultButton="true" mnemonicParsing="false" text="SEGUIR PARA PAGAMENTO">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btContinuarReserva" blendMode="COLOR_BURN" defaultButton="true" mnemonicParsing="false" text="CONTINUAR RESERVANDO">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btCancelarReserva" cancelButton="true" mnemonicParsing="false" style="-fx-background-color: SALMON;" text="CANCELAR" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </VBox>
+      <Line blendMode="COLOR_BURN" endX="498.0" layoutX="99.0" layoutY="119.0" startX="-100.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="COLOR_BURN" disable="true" fill="#f5efef" height="83.0" layoutX="24.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="303.0" />
+      <Text layoutX="370.0" layoutY="43.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="*Busca e preenche automaticamente passageiros já cadastrados no sistema" wrappingWidth="184.0">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

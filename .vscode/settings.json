@@ -1,0 +1,23 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Program Files\\Java\\jdk1.8.0_321\\lib\\ant-javafx.jar",
+        "c:\\Program Files\\Java\\jdk1.8.0_321\\lib\\dt.jar",
+        "c:\\Program Files\\Java\\jdk1.8.0_321\\lib\\javafx-mx.jar",
+        "c:\\Program Files\\Java\\jdk1.8.0_321\\lib\\jconsole.jar",
+        "c:\\Program Files\\Java\\jdk1.8.0_321\\lib\\packager.jar",
+        "c:\\Program Files\\Java\\jdk1.8.0_321\\lib\\sa-jdi.jar",
+        "c:\\Program Files\\Java\\jdk1.8.0_321\\lib\\tools.jar",
+        "c:\\Users\\Matheus Freitas\\Documents\\Java Libs\\javafx-sdk-18.0.2\\lib\\javafx.base.jar",
+        "c:\\Users\\Matheus Freitas\\Documents\\Java Libs\\javafx-sdk-18.0.2\\lib\\javafx.controls.jar",
+        "c:\\Users\\Matheus Freitas\\Documents\\Java Libs\\javafx-sdk-18.0.2\\lib\\javafx.fxml.jar",
+        "c:\\Users\\Matheus Freitas\\Documents\\Java Libs\\javafx-sdk-18.0.2\\lib\\javafx.graphics.jar",
+        "c:\\Users\\Matheus Freitas\\Documents\\Java Libs\\javafx-sdk-18.0.2\\lib\\javafx.media.jar",
+        "c:\\Users\\Matheus Freitas\\Documents\\Java Libs\\javafx-sdk-18.0.2\\lib\\javafx.swing.jar",
+        "c:\\Users\\Matheus Freitas\\Documents\\Java Libs\\javafx-sdk-18.0.2\\lib\\javafx.web.jar",
+        "c:\\Users\\Matheus Freitas\\Documents\\Java Libs\\javafx-sdk-18.0.2\\lib\\javafx-swt.jar"
+    ],
+    "git.ignoreLimitWarning": true
+}
