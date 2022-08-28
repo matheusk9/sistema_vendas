@@ -9,7 +9,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-import classes.Confirmacao;
 
 public class Main extends Application{
     // public static Stage stage, stageForm;
@@ -44,20 +43,19 @@ public class Main extends Application{
         Scene screenForm = new Scene(fxmlForm);
 
         setStage(primaryStage); 
-
         //coloca a cena em uma janela
-        getStage().setScene(scene);  
-        getStage().setTitle("tela principal");
-        
+        stage.setScene(scene);  
+        stage.setTitle("tela principal");
+        stage.setResizable(false);
         //abre a janela
-        getStage().show();  
+        stage.show();  
         
-        setInnerStage(new Stage(){{setScene(screenForm); }});
+        innerStage = new Stage(){{setScene(screenForm); }};
+        innerStage.setResizable(false);
         // sempre que a tela for aberta estará setando a validação como false 
-        getInnerStage().setOnShown((WindowEvent e)->{   
-            Confirmacao.setValidation(false);
+        innerStage.setOnShown((WindowEvent e)->{   
         });
-        getInnerStage().close();
+        innerStage.close();
     }
 
     //obrigatorio para execução do codigo

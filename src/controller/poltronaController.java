@@ -1,17 +1,14 @@
 package controller;
 
-import classes.Confirmacao;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
-import javafx.stage.Stage;
 import main.Main;
 
 
@@ -22,15 +19,9 @@ public class poltronaController implements Initializable{
     @FXML private Label lbSubtotal;
     @FXML private GridPane poltronaLadoMotorista;
     @FXML private GridPane poltronaLadoPassageiro;
-    
-    public Node poltrona;
-    Scene screenForm;
-    Stage stageTemp;
-    
+    private static Node poltrona;
     private final String selecionado = "-fx-background-color: Gold;";
     private final String disponivel = "-fx-background-color: MediumSeaGreen;"; 
-    
-    
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -46,17 +37,7 @@ public class poltronaController implements Initializable{
         poltrona = (Node) event.getSource();   
 
         if (poltrona.getStyle().equalsIgnoreCase(disponivel)) {
-            // poltrona.getPoltrona().setStyle(selecionado);
-
-            Main.getInnerStage().showAndWait();
-
-            if(Confirmacao.isValidation()){
-                poltrona.setStyle(selecionado);
-                System.out.println("true");
-            }
-            else{
-                System.out.println("false");
-            }
+            Main.getInnerStage().show();
         } 
         else if (poltrona.getStyle().equalsIgnoreCase(selecionado)) {
             System.out.println("amarelo");
@@ -69,11 +50,6 @@ public class poltronaController implements Initializable{
     public Node getPoltrona() {
         return poltrona;
     }
-
-    public void setPoltrona(Node poltrona) {
-        this.poltrona = poltrona;
-    }
-
 
     public String getSelecionado() {
         return selecionado;
