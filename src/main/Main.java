@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class Main extends Application{
     // public static Stage stage, stageForm;
@@ -28,7 +29,7 @@ public class Main extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception {
         
-        //talvez seja necessário passar no arquivo fxml no fx:controller= "pasta.arquivo"
+        // talvez seja necessário passar no arquivo fxml no fx:controller= "pasta.arquivo"
         try {
             root = FXMLLoader.load(getClass().getResource("/view/selectPoltrona.fxml"));
             fxmlForm = FXMLLoader.load(getClass().getResource("/view/dadosPassageiro.fxml"));
@@ -37,21 +38,29 @@ public class Main extends Application{
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        Scene scene = new Scene(root); //coloca o FXML em uma cena
+        //coloca o FXML em uma cena
+        Scene scene = new Scene(root); 
         Scene screenForm = new Scene(fxmlForm);
 
-        setStage(primaryStage); 
-        getStage().setScene(scene);  //coloca a cena em uma janela
-        getStage().setTitle("tela principal");
-        getStage().show();   //abre a janela        
+        setStage(primaryStage);
+        // coloca a cena em uma janela
+        stage.setScene(scene);  
+        stage.setTitle("tela principal");
+        stage.setResizable(false);
+        //abre a janela
+        stage.show();  
         
-        setInnerStage(new Stage(){{setScene(screenForm); }});
-        getInnerStage().hide();
-        
+        innerStage = new Stage(){{setScene(screenForm); }};
+        innerStage.setResizable(false);
+        // sempre que a tela for aberta estará setando a validação como false 
+        innerStage.setOnShown((WindowEvent e)->{   
+        });
+        innerStage.close();
     }
 
+    //obrigatorio para execução do codigo
     public static void main(String[] args) throws Exception {
-        launch(args);   //obrigatorio para execução do codigo
+        launch(args);   
     }
     
     
