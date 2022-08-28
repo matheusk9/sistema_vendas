@@ -1,5 +1,4 @@
 package controller;
-
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -23,6 +22,7 @@ public class poltronaController implements Initializable{
     private final String selecionado = "-fx-background-color: Gold;";
     private final String disponivel = "-fx-background-color: MediumSeaGreen;"; 
 
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         
@@ -30,6 +30,7 @@ public class poltronaController implements Initializable{
             Main.getStage().close();
         });
     }
+
 
     @FXML
     void corStatusPoltrona(MouseEvent event) {        
@@ -46,6 +47,7 @@ public class poltronaController implements Initializable{
             System.out.println("ELSE");
         }
     }
+
 
     public Node getPoltrona() {
         return poltrona;
