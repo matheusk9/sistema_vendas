@@ -83,17 +83,9 @@
             </Button>
          </children>
       </Group>
-      <VBox alignment="CENTER_LEFT" layoutX="402.0" layoutY="223.0" prefHeight="94.0" prefWidth="184.0" spacing="10.0">
+      <VBox alignment="CENTER_LEFT" layoutX="453.0" layoutY="223.0" prefHeight="94.0" prefWidth="133.0" spacing="10.0">
          <children>
-            <Button fx:id="btIrParaPagamento" blendMode="COLOR_BURN" defaultButton="true" mnemonicParsing="false" text="SEGUIR PARA PAGAMENTO">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button fx:id="btContinuarReserva" blendMode="COLOR_BURN" defaultButton="true" mnemonicParsing="false" text="CONTINUAR RESERVANDO">
+            <Button fx:id="salvarReserva" blendMode="COLOR_BURN" defaultButton="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="SALVAR">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>

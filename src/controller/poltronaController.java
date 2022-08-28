@@ -13,6 +13,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import main.Main;
 
+
 public class poltronaController implements Initializable{
 
     @FXML private Button btFinalizarCompra;
@@ -20,40 +21,55 @@ public class poltronaController implements Initializable{
     @FXML private Label lbSubtotal;
     @FXML private GridPane poltronaLadoMotorista;
     @FXML private GridPane poltronaLadoPassageiro;
+    
+    public Node poltrona;
     Scene screenForm;
     Stage stageTemp;
-
+    
+    private final String selecionado = "-fx-background-color: Gold;";
+    private final String disponivel = "-fx-background-color: MediumSeaGreen;"; 
+    
     
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         
-        // screenForm = new Scene(Main.fxmlForm);
-        
         btFinalizarCompra.setOnMouseClicked((MouseEvent e)->{
             Main.getStage().close();
         });
-        
-        poltronaLadoMotorista.setOnMouseClicked((MouseEvent e)->{
-
-            // Node poltrona = (Node) e.getSource();    //pego o objeto de onde ocorreu um evento
-            Main.getInnerStage().show();
-            
-
-
-            System.out.println( "FECHOU A TELA");
-
-        });
-
-        poltronaLadoPassageiro.setOnMouseClicked((MouseEvent e)->{
-            System.out.println("PASSAGEIRO:"+Main.getStage().getTitle());
-        });
     }
-//RESOLVER PROBLEMAS COM OS STAGES 
-
 
     @FXML
     void corStatusPoltrona(MouseEvent event) {
-        System.out.println("clicou");
+        poltrona = (Node) event.getSource();   //pego o objeto de onde ocorreu um evento
+
+        if (poltrona.getStyle().equalsIgnoreCase(disponivel)) {
+            // poltrona.getPoltrona().setStyle(selecionado);
+            Main.getInnerStage().show();
+
+        } 
+        else if (poltrona.getStyle().equalsIgnoreCase(selecionado)) {
+            System.out.println("amarelo");
+        } 
+        else {
+            System.out.println("ELSE");
+        }
+    }
+
+    public Node getPoltrona() {
+        return poltrona;
+    }
+
+    public void setPoltrona(Node poltrona) {
+        this.poltrona = poltrona;
+    }
+
+
+    public String getSelecionado() {
+        return selecionado;
+    }
+
+    public String getDisponivel() {
+        return disponivel;
     }
 }
