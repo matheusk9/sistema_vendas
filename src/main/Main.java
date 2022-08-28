@@ -8,6 +8,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
+import classes.Confirmacao;
 
 public class Main extends Application{
     // public static Stage stage, stageForm;
@@ -37,21 +39,30 @@ public class Main extends Application{
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        Scene scene = new Scene(root); //coloca o FXML em uma cena
+        //coloca o FXML em uma cena
+        Scene scene = new Scene(root); 
         Scene screenForm = new Scene(fxmlForm);
 
         setStage(primaryStage); 
-        getStage().setScene(scene);  //coloca a cena em uma janela
+
+        //coloca a cena em uma janela
+        getStage().setScene(scene);  
         getStage().setTitle("tela principal");
-        getStage().show();   //abre a janela        
+        
+        //abre a janela
+        getStage().show();  
         
         setInnerStage(new Stage(){{setScene(screenForm); }});
-        getInnerStage().hide();
-        
+        // sempre que a tela for aberta estará setando a validação como false 
+        getInnerStage().setOnShown((WindowEvent e)->{   
+            Confirmacao.setValidation(false);
+        });
+        getInnerStage().close();
     }
 
+    //obrigatorio para execução do codigo
     public static void main(String[] args) throws Exception {
-        launch(args);   //obrigatorio para execução do codigo
+        launch(args);   
     }
     
     

@@ -1,5 +1,6 @@
 package controller;
 
+import classes.Confirmacao;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -40,13 +41,22 @@ public class poltronaController implements Initializable{
     }
 
     @FXML
-    void corStatusPoltrona(MouseEvent event) {
-        poltrona = (Node) event.getSource();   //pego o objeto de onde ocorreu um evento
+    void corStatusPoltrona(MouseEvent event) {        
+        //pego o objeto de onde ocorreu um evento(click)
+        poltrona = (Node) event.getSource();   
 
         if (poltrona.getStyle().equalsIgnoreCase(disponivel)) {
             // poltrona.getPoltrona().setStyle(selecionado);
-            Main.getInnerStage().show();
 
+            Main.getInnerStage().showAndWait();
+
+            if(Confirmacao.isValidation()){
+                poltrona.setStyle(selecionado);
+                System.out.println("true");
+            }
+            else{
+                System.out.println("false");
+            }
         } 
         else if (poltrona.getStyle().equalsIgnoreCase(selecionado)) {
             System.out.println("amarelo");
