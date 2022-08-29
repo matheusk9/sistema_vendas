@@ -7,7 +7,8 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
 public class Menu {
-    public void getMenu(AnchorPane slider, Label menu, Label menuBack){
+
+    public static void getMenu(AnchorPane slider, Label menu, Label menuBack){
         slider.setTranslateX(-176);
         menu.setOnMouseClicked(e -> {
             TranslateTransition slide = new TranslateTransition();

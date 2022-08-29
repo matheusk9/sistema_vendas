@@ -22,7 +22,6 @@ public class poltronaController implements Initializable{
     private final String selecionado = "-fx-background-color: Gold;";
     private final String disponivel = "-fx-background-color: MediumSeaGreen;"; 
 
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         
