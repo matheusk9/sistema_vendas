@@ -8,10 +8,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.vendasController">
    <children>
-      <AnchorPane prefHeight="45.0" prefWidth="600.0" style="-fx-background-color: #032d4d;">
+      <AnchorPane id="HEAD" prefHeight="45.0" prefWidth="600.0" style="-fx-background-color: #032d4d;">
          <children>
             <Label fx:id="menuBack" layoutX="14.0" layoutY="14.0" text="MENU" textFill="WHITE">
                <graphic>
@@ -39,11 +38,11 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="slider" layoutY="45.0" maxHeight="1.7976931348623157E308" prefHeight="355.0" prefWidth="176.0" style="-fx-background-color: #032d4d;">
+      <AnchorPane id="MENU_SLIDE" fx:id="slider" layoutY="45.0" maxHeight="1.7976931348623157E308" prefHeight="355.0" prefWidth="176.0" style="-fx-background-color: #032d4d;">
          <children>
             <VBox layoutX="20.0" layoutY="55.0" maxHeight="1.7976931348623157E308" prefHeight="161.0" prefWidth="176.0" AnchorPane.bottomAnchor="141.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="53.0">
                <children>
-                  <Button fx:id="vendas" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="176.0" style="-fx-background-color: #032d4d;" text="Button" textFill="WHITE">
+                  <Button fx:id="btTela1" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="176.0" style="-fx-background-color: #032d4d;" text="Button" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -51,7 +50,7 @@
                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
                      </graphic>
                   </Button>
-                  <Button fx:id="passagens" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="176.0" style="-fx-background-color: #032d4d;" text="Button" textFill="WHITE">
+                  <Button fx:id="btTela2" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="176.0" style="-fx-background-color: #032d4d;" text="Button" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -59,7 +58,7 @@
                         <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
                      </graphic>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="176.0" style="-fx-background-color: #032d4d;" text="Button" textFill="WHITE">
+                  <Button fx:id="btTela3" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="38.0" prefWidth="176.0" style="-fx-background-color: #032d4d;" text="Button" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -77,6 +76,33 @@
                   </Button>
                </children>
             </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="TELA1" fx:id="tela1" layoutY="45.0" prefHeight="355.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="257.0" layoutY="109.0" prefHeight="189.0" prefWidth="298.0" text="TELA 1">
+               <font>
+                  <Font size="43.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="TELA2" fx:id="tela2" layoutY="45.0" prefHeight="355.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="257.0" layoutY="109.0" prefHeight="189.0" prefWidth="298.0" text="TELA 2">
+               <font>
+                  <Font size="43.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="TELA3" fx:id="tela3" layoutY="45.0" prefHeight="355.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="257.0" layoutY="109.0" prefHeight="189.0" prefWidth="176.0" text="TELA 3">
+               <font>
+                  <Font size="43.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

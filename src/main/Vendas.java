@@ -28,5 +28,6 @@ public class Vendas extends Application {
         Stage stage = primaryStage;
         stage.setScene(scene);
         stage.show();
+        
     }
 }

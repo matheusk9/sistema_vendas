@@ -11,6 +11,7 @@ public class Menu {
     public static void getMenu(AnchorPane slider, Label menu, Label menuBack){
         slider.setTranslateX(-176);
         menu.setOnMouseClicked(e -> {
+            slider.toFront();
             TranslateTransition slide = new TranslateTransition();
             slide.setDuration(Duration.seconds(0.4));
             slide.setNode(slider);
