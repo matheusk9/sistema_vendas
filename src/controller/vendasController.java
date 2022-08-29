@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import classes.Menu;
+import classes.Telas;
 
 public class vendasController implements Initializable{
 
@@ -26,44 +27,23 @@ public class vendasController implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Menu.getMenu(slider, menu, menuBack);
+        
+        showAndHideScreen();
+        
+    }
 
+    public void showAndHideScreen(){
+        Telas screen = new Telas(tela1,tela2,tela3);
         btTela1.setOnMouseClicked((MouseEvent e)->{
-            teste(tela1);
+            screen.show(screen.getTela1());
         });
 
         btTela2.setOnMouseClicked((MouseEvent e)->{
-            teste(tela2);
+            screen.show(screen.getTela2());
         });
         
         btTela3.setOnMouseClicked((MouseEvent e)->{
-            teste(tela3);
+            screen.show(screen.getTela3());
         });
-
     }
-
-    public void showScreen(){
-
-    }
-
-
-    @FXML
-    void teste(AnchorPane mostrar){
-        if (mostrar.equals(tela1)){
-            tela2.setVisible(false);
-            tela3.setVisible(false);
-            tela1.setVisible(true);
-        }
-        else if(mostrar.equals(tela2)){
-            tela1.setVisible(false);
-            tela3.setVisible(false);
-            tela2.setVisible(true);
-        }
-        else{
-            tela1.setVisible(false);
-            tela2.setVisible(false);
-            tela3.setVisible(true);
-        }
-    }
-
-
 }
