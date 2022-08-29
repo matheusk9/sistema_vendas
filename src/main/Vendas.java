@@ -19,7 +19,7 @@ public class Vendas extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         try {
-            root = FXMLLoader.load(getClass().getResource("/view/vendas.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/view/menu.fxml"));
         } catch (IOException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
