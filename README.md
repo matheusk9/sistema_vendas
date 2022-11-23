@@ -1,19 +1,23 @@
-## Getting Started
+## Em andamento...
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Projeto ainda em desenvolvimento no qual o objetivo é um sistema para vendas de passagens, voltado para empresas de ônibus.
 
-## Folder Structure
+## Ferramentas
 
-The workspace contains two folders by default, where:
+Estão sendo utilizadas para o desenvolvimento:
+>Java
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+>Tecnologia JavaFX 
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+>SceneBuilder para desenvolvimento das telas.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Telas já criadas
 
-## Dependency Management
+>Seleção de poltronas
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
-"# sistema_vendas" 
+![principal](https://user-images.githubusercontent.com/56278438/203626015-24bb15d9-c95a-474e-bc3c-408d9dfd727b.png)
+
+>Cadastro do passageiro
+
+![cadastro](https://user-images.githubusercontent.com/56278438/203626026-60ed6c8a-c839-4576-8ff4-125b550ed5a7.png)
+
